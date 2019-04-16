@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.board {
+    width: 100%;
+    max-width: 500px;
+    display: : flex;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    box-shadow: 4px 4px 4px 0 rgba(46, 61, 73, 0.5);
+    border-radius: 10px;
+    margin: 8px auto;
+    justify-content: space-around;
+}
+
+.deck {
+    width: 100%;
+    height: 120px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deck .card {
+    height: 80px;
+    width: 80px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px auto;
+    box-shadow: 5px 2px 12px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    width: 345px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    flex-shrink: 1;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .timer {
+    margin-left: 16px;
+    padding-left: 16px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    flex-shrink: 1;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    flex-shrink: 1;
+}
+
+.banner {
+    position: absolute;
+    width: 360px;
+    background: #ffffff url('../img/geometry2.png');
+    color: #000000;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    padding: 16px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.small-text {
+    font-size: 0.8em;
+}
